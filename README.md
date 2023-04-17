@@ -80,8 +80,7 @@ Create a new employee named “Jane Doe” (same password) with the username of 
 Add jane_admin to the “Domain Admins” Security Group
   
 Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”
-  
-User jane_admin as your admin account from now on
+ 
 
 </p>
 
