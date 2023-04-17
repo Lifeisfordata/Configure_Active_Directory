@@ -6,10 +6,6 @@
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
 
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com)
-
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
@@ -27,7 +23,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Setup Resources in Azure
 - Ensure Connectivity between the client and Domain Controller
 - Install Active Directory
-- Step 4
+- Create an Admin and Normal User Account in AD
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -72,15 +68,20 @@ Restart and then log back into DC-1 as user: mydomain.com\labuser
 </p>
 <br />
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/90vVeAD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”
+  
+Create a new OU named “_ADMINS”
+  
+Create a new employee named “Jane Doe” (same password) with the username of “jane_admin”
+  
+Add jane_admin to the “Domain Admins” Security Group
+  
+Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”
+  
+User jane_admin as your admin account from now on
+
 </p>
-<br />
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+
